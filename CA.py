@@ -458,8 +458,6 @@ while M <= 10:   # run 10 iterations
     M = M + 1
 
 
-
-
 #   write result to disk
 driver = gdal.GetDriverByName("GTiff")
 outDataset = driver.Create("M:/808/Mini2/CA.tif",
