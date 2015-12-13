@@ -24,8 +24,6 @@ except StandardError, e:
 # Get the spatial reference of the input image
 projInfo = raw_image.GetProjection()
 transInfo = raw_image.GetGeoTransform()
-projInfo = raw_image.GetProjection()
-transInfo = raw_image.GetGeoTransform()
 
 
 # Read the image as an array
@@ -466,8 +464,6 @@ while M <= 10:
 driver = gdal.GetDriverByName("GTiff")
 outDataset = driver.Create("M:/808/Mini2/CA.tif",
                     cols,rows,bands,GDT_Float32)
-projInfo = raw_image.GetProjection()
-transInfo = raw_image.GetGeoTransform()
 outDataset.SetProjection(projInfo)
 outDataset.SetGeoTransform(transInfo)
 CA = outDataset.GetRasterBand(1)
