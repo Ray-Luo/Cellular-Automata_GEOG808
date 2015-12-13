@@ -35,7 +35,7 @@ pre_classified = raw_image.ReadAsArray(0, 0, cols, rows)
 i = 1
 j = 1
 M = 1
-while M <= 10:
+while M <= 10:   # run 10 iterations
     while i < rows - 1:
         while j < cols - 1:
             if pre_classified[i,j] == 1:
